@@ -1,19 +1,22 @@
-<form #loginForm="ngForm">
-  <h1 class="login-title">Log In</h1>
-  <div class="form-group">
-    <label>Email</label>
-    <input class="form-control" #emailControl="ngModel"
-           placeholder="Email" [(ngModel)]="email" name="email"
-           maxlength="70" email required/>
+<form #loginForm="ngForm" class="panel panel-primary">
+  <h1 class="login-title" class="text-center">Log In</h1>
+  <div class="panel-body">
+    <div class="form-group">
+      <label><i class="text-danger">*</i>Email</label>
+      <input class="form-control" #emailControl="ngModel"
+             placeholder="Email" [(ngModel)]="email" name="email"
+             maxlength="70" email required/>
+    </div>
+    <div class="form-group">
+      <label><i class="text-danger">*</i>Password</label>
+      <input class="form-control" #passwordControl="ngModel"
+             placeholder="Password" [(ngModel)]="password" name="password"
+             maxlength="70" type="password" required/>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input class="form-control" #passwordControl="ngModel"
-           placeholder="Password" [(ngModel)]="password" name="password"
-           maxlength="70" type="password" required/>
+  <div class="panel-footer">
+    <button [disabled]="!loginForm.form.valid" type="submit"
+            class="btn btn-success" (click)="signIn()">Sign in</button><br><br>
+    <span><a href="" class="text-danger" routerLink="/register">Create New Account</a></span>
   </div>
-
-  <button [disabled]="!loginForm.form.valid" type="submit"
-          class="btn btn-info" (click)="signIn()">Sign in</button><br><br>
-  <span><a href="" routerLink="/register">Create Account</a></span>
 </form>

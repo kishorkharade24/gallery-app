@@ -13,15 +13,18 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
+import { RegisterComponent } from './register/register.component';
+import { AlertComponent } from './alert/alert.component';
 
 import { AuthenticationGaurd } from './services/authenticationGaurd.service';
 import { AuthenticationService } from './services/authentication.service';
 import { ImageService } from './services/image.service';
 import { UploadService } from './services/upload.service';
+import { AlertService } from './services/alert.service';
 
 import { appRoutes } from '../routes';
 import { environment } from '../environments/environment';
-import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { RegisterComponent } from './register/register.component';
     NavbarComponent,
     LoginComponent,
     UploadComponent,
-    RegisterComponent
+    RegisterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,8 @@ import { RegisterComponent } from './register/register.component';
     AuthenticationGaurd,
     AuthenticationService,
     ImageService,
-    UploadService
+    UploadService,
+    AlertService
   ],
   bootstrap: [AppComponent]
 })

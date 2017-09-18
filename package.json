@@ -20,6 +20,7 @@
   "dependencies": {
     "@angular/cli": "1.4.2",
     "@angular/compiler-cli": "^4.2.4",
+    "typescript": "~2.3.3",
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
